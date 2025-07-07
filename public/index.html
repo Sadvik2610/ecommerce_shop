@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecommerce Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Simple Shop</h1>
+    <nav id="auth-nav">
+      <button id="loginBtn">Login</button>
+      <button id="registerBtn">Register</button>
+      <span id="userSpan" hidden></span>
+      <button id="logoutBtn" hidden>Logout</button>
+    </nav>
+  </header>
+
+  <div id="modal" class="modal hidden">
+    <form id="authForm" class="card">
+      <h2 id="formTitle">Login</h2>
+      <input name="username" placeholder="Username" class="reg-field" hidden />
+      <input name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <main>
+    <section id="productSection">
+      <h2>Products</h2>
+      <div id="productList" class="grid"></div>
+      <div id="pagination"></div>
+    </section>
+
+    <section id="cartSection">
+      <h2>Your Cart</h2>
+      <ul id="cartList"></ul>
+      <button id="placeOrderBtn" class="primary" hidden>Place Order</button>
+    </section>
+  </main>
+
+  <footer><small>&copy;Ecommerce Shop</small></footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
